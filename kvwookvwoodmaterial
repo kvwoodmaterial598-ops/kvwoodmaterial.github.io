@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - KV Wood Material</title>
+    <style>
+        body { font-family: 'Khmer OS Battambang', sans-serif; background-color: #121212; color: #ffffff; margin: 0; padding: 20px; text-align: center; }
+        h1 { color: #d4af37; margin-bottom: 30px; margin-top: 40px; }
+        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
+        .card { background-color: #1e1e1e; border: 1px solid #d4af37; border-radius: 8px; padding: 20px; width: 280px; box-shadow: 0 4px 8px rgba(0,0,0,0.5); text-align: left; }
+        .card h3 { color: #d4af37; margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .card p { color: #cccccc; font-size: 14px; line-height: 1.6; }
+        .back-btn { display: inline-block; margin-top: 40px; padding: 12px 25px; background-color: #d4af37; color: #121212; text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.3s; }
+        .back-btn:hover { background-color: #ffffff; }
+    </style>
+</head>
+<body>
 
+    <h1>ផលិតផលរបស់យើង (Our Products)</h1>
+
+    <div class="container">
+        <div class="card">
+            <h3>MFC & MDF Boards</h3>
+            <p>ក្តារបន្ទះសាច់ឈើដង់ស៊ីតេមធ្យម និងក្តារកំប្ល provide គុណភាពខ្ពស់ សម្រាប់ផលិតគ្រឿងសង្ហារិមគ្រប់ប្រភេទ និងការដេគ័រខាងក្នុងតម្រូវការបច្ចុប្បន្ន។</p>
+        </div>
+
+        <div class="card">
+            <h3>3D Embossed WPB</h3>
+            <p>បន្ទះក្តារជ័រមិនជ្រាបទឹក (Water Proof Board) ផ្ទៃម៉ូដផុសបែប 3D (Ready-To-Paint) ងាយស្រួលបាញ់ថ្នាំពណ៌បានស្អាត និងចំណេញពេលដំឡើង។</p>
+        </div>
+
+        <div class="card">
+            <h3>Furniture Accessories</h3>
+            <p>គ្រឿងបន្លាស់ទូ ហាតវែរផ្ទះបាយ និងសម្ភារៈអាលុយមីញ៉ូមម៉ាកល្បីៗ ធានាគុណភាពរឹងមាំស្តង់ដារខ្ពស់។</p>
+        </div>
+    </div>
+
+    <a href="index.html" class="back-btn">ត្រឡប់ទៅទំព័រដើម</a>
+
+</body>
+</html>
