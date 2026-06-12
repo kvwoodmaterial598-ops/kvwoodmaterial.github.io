@@ -39,38 +39,23 @@
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 15px 20px;
+            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo-container {
+        .logo-link {
             display: flex;
             align-items: center;
             text-decoration: none;
-            gap: 10px;
         }
 
-        .logo-icon {
-            width: 35px;
-            height: 35px;
-            background-color: var(--secondary-color);
-            border: 2px solid var(--gold-accent);
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gold-accent);
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        .logo-text {
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--primary-color);
-            letter-spacing: 1px;
+        /* រៀបចំទំហំឡូហ្គោនៅលើ Header កុំឱ្យខ្ពស់ពេក */
+        .logo-img-header {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
         }
 
         .nav-menu a {
@@ -97,10 +82,10 @@
             justify-content: center;
         }
 
-        /* រចនាស៊ុមជុំវិញរូបភាពឱ្យមើលទៅប្រណីត និងលេចធ្លោ */
+        /* រចនាស៊ុមជុំវិញផ្ទាំងរូបភាពកាតាឡុកធំឱ្យលេចធ្លោ */
         .hero-banner-image {
             max-width: 100%;
-            width: 600px;
+            width: 650px;
             height: auto;
             margin-bottom: 25px;
             border: 2px solid var(--gold-accent);
@@ -277,9 +262,8 @@
 
     <header>
         <div class="nav-container">
-            <a href="#" class="logo-container">
-                <div class="logo-icon">KV</div>
-                <span class="logo-text">KV WOOD MATERIAL</span>
+            <a href="#" class="logo-link">
+                <img src="https://raw.githubusercontent.com/Arilux-Design/image-storage/main/KV-Wood-Logo-Header.png" alt="KV Wood Material" class="logo-img-header">
             </a>
             <nav class="nav-menu">
                 <a href="#">ទំព័រដើម</a>
@@ -290,7 +274,7 @@
     </header>
 
     <section class="hero">
-        <img src="https://raw.githubusercontent.com/Arilux-Design/image-storage/main/KV-Wood-Banner.jpg" alt="KV Wood Material Banner" class="hero-banner-image">
+        <img src="https://raw.githubusercontent.com/Arilux-Design/image-storage/main/KV-Wood-Full-Banner.jpg" alt="KV Wood Material Banner" class="hero-banner-image">
         <h1>KV WOOD MATERIAL</h1>
         <p>ដេប៉ូផ្គត់ផ្គង់បន្ទះឈើកែច្នៃ គ្រឿងតុបតែងផ្ទៃមុខ និងគ្រឿង Hardware ទំនើបៗគ្រប់ប្រភេទ គុណភាពខ្ពស់ សម្រាប់តម្រូវការដេគ័រ និងដំឡើងគ្រឿងសង្ហារឹមគ្រប់កម្រិត។</p>
         <a href="#contact" class="btn-main">ទំនាក់ទំនងសួរតម្លៃ</a>
