@@ -1,389 +1,224 @@
 <!DOCTYPE html>
-<html lang="km">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KV Wood Material - ផ្គត់ផ្គង់សម្ភារៈបន្ទះឈើ និងគ្រឿងតុបតែងខាងក្នុង</title>
-    <link href="https://fonts.googleapis.com/css2?family=Kantumruuy+Pro:wght@300;400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #8B5A2B; 
-            --secondary-color: #3E2723;
-            --light-bg: #F5F5DC;
-            --dark-text: #2C2C2C;
-            --gold-accent: #D4AF37;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KV Wood Material</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Kantumruuy Pro', 'Inter', sans-serif;
-        }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-        body {
-            background-color: #FAFAFA;
-            color: var(--dark-text);
-            line-height: 1.6;
-        }
+body{
+background:#111;
+color:white;
+}
 
-        /* Header & Navigation */
-        header {
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+header{
+background:black;
+padding:15px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:2px solid gold;
+}
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.logo{
+font-size:28px;
+font-weight:bold;
+color:gold;
+}
 
-        .logo-link {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
 
-        /* រៀបចំទំហំឡូហ្គោនៅលើ Header ឱ្យសមសួន និងត្រឹមត្រូវបេះបិទ */
-        .logo-img-header {
-            height: 50px;
-            width: auto;
-            object-fit: contain;
-            background-color: #000000; /* ដាក់ផ្ទៃខាងក្រោយខ្មៅដើម្បីឱ្យលេចរូបភាពឡូហ្គោដើមឈើមាស */
-            padding: 4px 12px;
-            border-radius: 4px;
-            border: 1px solid var(--gold-accent);
-        }
+.hero{
+height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
 
-        .nav-menu a {
-            text-decoration: none;
-            color: var(--dark-text);
-            margin-left: 20px;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
+.hero h1{
+font-size:55px;
+color:gold;
+margin-bottom:20px;
+}
 
-        .nav-menu a:hover {
-            color: var(--primary-color);
-        }
+.hero p{
+font-size:22px;
+max-width:800px;
+}
 
-        /* Hero Banner */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
+.btn{
+margin-top:30px;
+padding:15px 35px;
+background:gold;
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:5px;
+}
 
-        /* រចនាស៊ុមជុំវិញផ្ទាំងរូបភាពកាតាឡុកធំឱ្យលេចធ្លោ */
-        .hero-banner-image {
-            max-width: 100%;
-            width: 650px;
-            height: auto;
-            margin-bottom: 25px;
-            border: 2px solid var(--gold-accent);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
-            border-radius: 4px;
-        }
+.section{
+padding:80px 10%;
+}
 
-        .hero h1 {
-            font-size: 32px;
-            margin-bottom: 15px;
-            font-weight: 700;
-            color: var(--gold-accent);
-        }
+.section h2{
+text-align:center;
+color:gold;
+margin-bottom:40px;
+}
 
-        .hero p {
-            font-size: 16px;
-            max-width: 750px;
-            margin: 0 auto 30px auto;
-            opacity: 0.9;
-            line-height: 1.8;
-        }
+.categories{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
 
-        .btn-main {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 12px 35px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            display: inline-block;
-            transition: background 0.3s, transform 0.2s;
-        }
+.card{
+background:#222;
+padding:30px;
+border-radius:10px;
+text-align:center;
+border:1px solid #444;
+}
 
-        .btn-main:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-2px);
-        }
+.card:hover{
+border-color:gold;
+}
 
-        /* Categories Section */
-        .section-title {
-            text-align: center;
-            margin: 60px 0 40px 0;
-            font-size: 28px;
-            color: var(--secondary-color);
-        }
+.contact{
+text-align:center;
+line-height:2;
+}
 
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background-color: var(--primary-color);
-            margin: 10px auto 0 auto;
-        }
+footer{
+background:black;
+padding:20px;
+text-align:center;
+border-top:2px solid gold;
+}
+</style>
 
-        .products-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-
-        .product-img {
-            width: 100%;
-            height: 240px;
-            object-fit: cover;
-            background-color: #eaeaea;
-        }
-
-        .product-info {
-            padding: 25px;
-        }
-
-        .product-info h3 {
-            font-size: 20px;
-            margin-bottom: 12px;
-            color: var(--secondary-color);
-            border-bottom: 2px solid #F5F5F5;
-            padding-bottom: 8px;
-        }
-
-        .product-info p {
-            font-size: 14px;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            background-color: #EEF2F3;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .contact-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .info-list {
-            margin-bottom: 35px;
-            font-size: 16px;
-            color: #444;
-            text-align: center;
-            list-style: none;
-        }
-
-        .info-list li {
-            margin-bottom: 10px;
-        }
-
-        .contact-grid {
-            max-width: 500px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .contact-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            padding: 15px;
-            border-radius: 8px;
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            font-size: 16px;
-            transition: background 0.3s;
-        }
-
-        .btn-tg { background-color: #0088cc; }
-        .btn-tg:hover { background-color: #0077b3; }
-        .btn-fb { background-color: #1877F2; }
-        .btn-fb:hover { background-color: #145dbf; }
-        .btn-phone { background-color: #4CAF50; }
-        .btn-phone:hover { background-color: #43a047; }
-
-        footer {
-            background-color: var(--secondary-color);
-            color: #b0bec5;
-            text-align: center;
-            padding: 25px;
-            font-size: 14px;
-        }
-
-        @media (max-width: 768px) {
-            .nav-container { flex-direction: column; gap: 15px; }
-            .hero h1 { font-size: 26px; }
-            .hero-banner-image { width: 100%; }
-            .products-container { grid-template-columns: 1fr; }
-        }
-    </style>
 </head>
 <body>
 
-    <header>
-        <div class="nav-container">
-            <a href="#" class="logo-link">
-                <svg class="logo-img-header" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="100%" height="100%" fill="#000000"/>
-                    <rect x="20" y="20" width="55" height="60" fill="none" stroke="#D4AF37" stroke-width="4" rx="4"/>
-                    <path d="M48 30 L48 53 L38 30 M48 53 L58 30 M48 53 L48 70 L38 70 M48 53 M48 70 M55 53 L58 70" stroke="#D4AF37" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <text x="95" y="52" fill="#D4AF37" font-family="'Inter', sans-serif" font-size="24" font-weight="bold" letter-spacing="2">KV WOOD</text>
-                    <text x="95" y="76" fill="#D4AF37" font-family="'Inter', sans-serif" font-size="15" font-weight="600" letter-spacing="4">MATERIAL</text>
-                </svg>
-            </a>
-            <nav class="nav-menu">
-                <a href="#">ទំព័រដើម</a>
-                <a href="#products">ផលិតផល</a>
-                <a href="#contact">ទំនាក់ទំនង</a>
-            </nav>
-        </div>
-    </header>
+<header>
+<div class="logo">KV WOOD MATERIAL</div>
 
-    <section class="hero">
-        <svg class="hero-banner-image" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100%" height="100%" fill="#000000"/>
-            <rect x="250" y="40" width="300" height="170" fill="none" stroke="#D4AF37" stroke-width="8" rx="6"/>
-            <path d="M400 70 L400 120 L375 70 M400 120 L425 70 M400 120 L400 160 L375 160 M400 120 M400 160 M415 120 L425 160" stroke="#D4AF37" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-            <text x="400" y="245" fill="#D4AF37" font-family="'Inter', sans-serif" font-size="26" font-weight="bold" text-anchor="middle" letter-spacing="6">WOOD - MATERIAL</text>
-            <line x1="40" y1="275" x2="760" y2="275" stroke="#D4AF37" stroke-width="4"/>
-            <text x="400" y="330" fill="#D4AF37" font-family="'Kantumruuy Pro', sans-serif" font-size="32" font-weight="bold" text-anchor="middle">ផ្គត់ផ្គង់ក្តារ MFC និងគ្រឿងបន្លាស់ សង្ហារឹម</text>
-            <text x="400" y="385" fill="#D4AF37" font-family="'Inter', sans-serif" font-size="24" font-weight="500" text-anchor="middle" letter-spacing="1">Supplying MFC Boards and Furniture Accessories</text>
-            <line x1="40" y1="415" x2="760" y2="415" stroke="#D4AF37" stroke-width="2"/>
-        </svg>
-        
-        <h1>KV WOOD MATERIAL</h1>
-        <p>ដេប៉ូផ្គត់ផ្គង់បន្ទះឈើកែច្នៃ គ្រឿងតុបតែងផ្ទៃមុខ និងគ្រឿង Hardware ទំនើបៗគ្រប់ប្រភេទ គុណភាពខ្ពស់ សម្រាប់តម្រូវការដេគ័រ និងដំឡើងគ្រឿងសង្ហារឹមគ្រប់កម្រិត។</p>
-        <a href="#contact" class="btn-main">ទំនាក់ទំនងសួរតម្លៃ</a>
-    </section>
+<nav>
+<a href="#">Home</a>
+<a href="#">Products</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</nav>
+</header>
 
-    <section id="products">
-        <h2 class="section-title">ប្រកាសកាតាឡុកផលិតផល</h2>
-        <div class="products-container">
-            
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=400&q=80" alt="MFC Board" class="product-img">
-                <div class="product-info">
-                    <h3>បន្ទះក្តារ MFC</h3>
-                    <p>បន្ទះក្តារបន្ទះសាច់ម៉ត់អ៊ុតផ្ទៃមុខ Melamine មានពណ៌សាច់ឈើធម្មជាតិ និងពណ៌ទាន់សម័យជាច្រើនជម្រើស ធន់នឹងការឆ្ូត និងងាយស្រួលថែទាំ។</p>
-                </div>
-            </div>
+<section class="hero">
+<h1>Premium MFC Boards & Furniture Accessories</h1>
 
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=400&q=80" alt="Acrylic Panel" class="product-img">
-                <div class="product-info">
-                    <h3>បន្ទះអ៊ុតមុខស្អាត Acrylic Panel</h3>
-                    <p>ផ្តល់នូវផ្ទៃមុខលោងស្រិល កម្រិតចាំងដូចកញ្ចក់ បង្កើតភាពប្រណីតកម្រិតខ្ពស់សម្រាប់ទូផ្ទះបាយ ស៊ុមទូខោអាវ និងការតុបតែងបែបស៊ីវិល័យ។</p>
-                </div>
-            </div>
+<p>
+Supplying MFC Boards, Decorative Panels and Furniture Accessories
+for Homes, Offices and Commercial Projects.
+</p>
 
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=400&q=80" alt="Laminate Flooring" class="product-img">
-                <div class="product-info">
-                    <h3>ក្តារបន្ទះក្រាលការ៉ូ Laminate Flooring</h3>
-                    <p>ក្តារកម្រាលឈើប្រណីត ការពារការជ្រាបទឹក ធន់នឹងសម្ពាធដើរជាន់ និងផ្តល់ភាពកក់ក្តៅដល់សោភ័ណភាពផ្ទះទាំងមូល。</p>
-                </div>
-            </div>
+<a class="btn" href="#products">View Products</a>
+</section>
 
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=400&q=80" alt="Door Systems" class="product-img">
-                <div class="product-info">
-                    <h3>ប្រព័ន្ធទ្វារ Door Systems</h3>
-                    <p>រចនាសម្ព័ន្ធទ្វារបន្ទះឈើកែច្នៃ ស៊ុមទ្វារ និងទ្វាររុញទំនើបៗ កាត់បន្ថយសំឡេងបានល្អ និងមានទម្រង់រឹងមាំយូរអង្វែង។</p>
-                </div>
-            </div>
+<section class="section" id="products">
 
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80" alt="Components" class="product-img">
-                <div class="product-info">
-                    <h3>គ្រឿងបង្គុំបន្ទះឈើ Components</h3>
-                    <p>គ្រឿងបង្គុំផ្សេងៗ ស៊ុមគែម សន្លឹកឈើគែម (Edge Banding) និងសម្ភារៈចំបាច់សម្រាប់បញ្ចប់ការងារតម្លើងឱ្យមានភាពហ្មត់ចត់។</p>
-                </div>
-            </div>
+<h2>Product Categories</h2>
 
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=400&q=80" alt="Hardware" class="product-img">
-                <div class="product-info">
-                    <h3>គ្រឿងបន្លាស់ និងគ្រឿង Hardware</h3>
-                    <p>ធ្នើរទាញកន្ត្រក ហ៊ីងទ្វារ បង្គុំស្លាយថតតុ និងគ្រឿងដែកអ៊ីណុកទំនើបៗសម្រាប់ទូផ្ទះបាយ និងទូខោអាវ ដំណើរការបិទបើកដោយរលូន។</p>
-                </div>
-            </div>
+<div class="categories">
 
-        </div>
-    </section>
+<div class="card">
+<h3>MFC Boards</h3>
+</div>
 
-    <section id="contact" class="contact-section">
-        <div class="contact-container">
-            <h2 class="section-title">ព័ត៌មានទំនាក់ទំនង</h2>
-            
-            <ul class="info-list">
-                <li>📧 <strong>អ៊ីមែល៖</strong> kv.wood.material598@gmail.com</li>
-                <li>📞 <strong>ទូរស័ព្ទ៖</strong> 089 335 526 / 089 335 516</li>
-                <li>📍 <strong>ទីតាំង៖</strong> រាជធានីភ្នំពេញ (អាសយដ្ឋានលម្អិតនឹងធ្វើការធ្វើបច្ចុប្បន្នភាពពេលក្រោយ)</li>
-            </ul>
-            
-            <div class="contact-grid">
-                <a href="https://t.me/Kvwoo" class="contact-btn btn-tg" target="_blank">
-                    💬 ផ្ញើសារទៅកាន់ Telegram
-                </a>
-                
-                <a href="https://www.facebook.com/share/1Mq3beKy3r/" class="contact-btn btn-fb" target="_blank">
-                    👍 ចូលទៅកាន់ Facebook Page
-                </a>
-                
-                <a href="tel:+85589335526" class="contact-btn btn-phone">
-                    📞 ហៅទៅកាន់លេខ 089 335 526
-                </a>
-            </div>
-        </div>
-    </section>
+<div class="card">
+<h3>Acrylic Panels</h3>
+</div>
 
-    <footer>
-        <p>&copy; 2026 KV Wood Material. រក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
-    </footer>
+<div class="card">
+<h3>Laminate Flooring</h3>
+</div>
+
+<div class="card">
+<h3>Door Systems</h3>
+</div>
+
+<div class="card">
+<h3>Furniture Components</h3>
+</div>
+
+<div class="card">
+<h3>Hardware & Accessories</h3>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>About KV Wood Material</h2>
+
+<div class="contact">
+
+<p>
+KV Wood Material specializes in supplying quality MFC boards,
+decorative materials and furniture accessories in Cambodia.
+</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Contact Us</h2>
+
+<div class="contact">
+
+<p>📞 089 335 526</p>
+<p>📞 089 335 516</p>
+
+<p>✉️ kv.wood.material598@gmail.com</p>
+
+<p>📍 Phnom Penh, Cambodia</p>
+
+<p>
+<a style="color:gold;"
+href="https://www.facebook.com/share/1Mq3beKy3r/">
+Facebook
+</a>
+</p>
+
+<p>
+<a style="color:gold;"
+href="https://t.me/Kvwoo">
+Telegram
+</a>
+</p>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 KV Wood Material. All Rights Reserved.
+</footer>
 
 </body>
 </html>
